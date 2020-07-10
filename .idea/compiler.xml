@@ -10,6 +10,7 @@
         <module name="eureka-client" />
         <module name="SpringCloud" />
         <module name="eureka-provider" />
+        <module name="User-Api" />
         <module name="Eureka-Server" />
         <module name="Eureka-Client" />
         <module name="Eureka-Provider" />
@@ -21,6 +22,7 @@
       <module name="Eureka-Client" options="-parameters" />
       <module name="Eureka-Provider" options="-parameters" />
       <module name="Eureka-Server" options="-parameters" />
+      <module name="User-Api" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-provider" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
