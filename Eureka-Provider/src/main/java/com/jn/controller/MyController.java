@@ -29,9 +29,7 @@ public class MyController {
     //http://localhost:91/health?status=true
     @GetMapping("/health")
     public String Health(@RequestParam("status") Boolean status) {
-
         healthStatusCheck.setStatus(status);
-
         return healthStatusCheck.getStatus().toString();
     }
 
@@ -49,21 +47,20 @@ public class MyController {
 
     @RequestMapping("/getObj")
     public Object getObj() {
-        Person person = new Person("张三",18);
+        Person person = new Person("张三", 18);
         return person;
     }
 
     @RequestMapping("/getObj2")
     public Object getObj2(String name) {
-        Person person = new Person(name,18);
+        Person person = new Person(name, 18);
         return person;
     }
 
     @PostMapping("/postParam")
     public URI postParam(@RequestBody Person person, HttpServletResponse response) throws URISyntaxException {
-
-        URI uri = new URI("http://www.baidu.com/s?wd=" + person.getName());
-
+        URI uri = new URI("https://www.baidu.com/s?wd=" + person.getName());
+        response.setHeader("Location", uri.toString());
         return uri;
     }
 

@@ -25,12 +25,12 @@ public class MyController {
     @Autowired
     EurekaClient eurekaClient;
 
-
     @Autowired
     DiscoveryClient discoveryClient;
 
     @Autowired
     LoadBalancerClient loadBalancerClient;
+
 
 
 
@@ -43,10 +43,8 @@ public class MyController {
 
     @RequestMapping("/client")
     public String cilent() {
-
         List<String> services = discoveryClient.getServices();
-        for (String s : services
-        ) {
+        for (String s : services) {
             System.out.println(s);
         }
         return "OK ......";
@@ -73,28 +71,18 @@ public class MyController {
     public Object client4() {
         //使用服务名找列表
         List<InstanceInfo> instancesByVipAddress = eurekaClient.getInstancesByVipAddress("eureka-client", false);
-
         for (InstanceInfo instanceInfo : instancesByVipAddress) {
             System.out.println("InstanceInfo:" + instanceInfo);
         }
-
         if (instancesByVipAddress.size() > 0) {
-
             InstanceInfo instanceInfo = instancesByVipAddress.get(0);
-
             if (instanceInfo.getStatus() == InstanceInfo.InstanceStatus.UP) {
-
                 String url = "http://" + instanceInfo.getHostName() + ":" + instanceInfo.getPort() + "/hi";
-
                 System.out.println("URL:" + url);
-
                 RestTemplate restTemplate = new RestTemplate();
-
                 String forObject = restTemplate.getForObject(url, String.class);
-
                 System.out.println("forObject:" + forObject);
             }
-
         }
 
         return "OK";
@@ -105,18 +93,10 @@ public class MyController {
 
         //ribbon 完成客户端的负载均衡，多滤掉down的节点
         ServiceInstance choose = loadBalancerClient.choose("eureka-client");
-
-        String url = "http://"+choose.getHost()+":"+choose.getPort()+"/hi";
-
+        String url = "http://" + choose.getHost() + ":" + choose.getPort() + "/hi";
         RestTemplate restTemplate = new RestTemplate();
         String forObject = restTemplate.getForObject(url, String.class);
-
         System.out.println(forObject);
-
         return "OK";
     }
-
-
-
-
 }

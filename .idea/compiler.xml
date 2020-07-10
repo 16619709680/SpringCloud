@@ -8,10 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
         <module name="eureka-client" />
-        <module name="Eureka-Provider" />
         <module name="SpringCloud" />
+        <module name="eureka-provider" />
         <module name="Eureka-Server" />
         <module name="Eureka-Client" />
+        <module name="Eureka-Provider" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="Eureka-Provider" options="-parameters" />
       <module name="Eureka-Server" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
+      <module name="eureka-provider" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
     </option>
   </component>

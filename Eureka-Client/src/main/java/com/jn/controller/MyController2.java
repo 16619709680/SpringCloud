@@ -26,9 +26,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class MyController2 {
 
 
+    @Qualifier("eurekaClient")
     @Autowired
     EurekaClient eurekaClient;
-
 
     @Autowired
     DiscoveryClient discoveryClient;
@@ -37,23 +37,19 @@ public class MyController2 {
     LoadBalancerClient loadBalancerClient;
 
     @Autowired
-     RestTemplate restTemplate;
+    RestTemplate restTemplate;
 
     AtomicInteger atomicInteger = new AtomicInteger(2);
 
+
     @RequestMapping("/client6")
     public Object client6() {
-
         //ribbon 完成客户端的负载均衡，多滤掉down的节点
         ServiceInstance choose = loadBalancerClient.choose("provider");
-
         String url = "http://" + choose.getHost() + ":" + choose.getPort() + "/getport";
-
         RestTemplate restTemplate = new RestTemplate();
         String forObject = restTemplate.getForObject(url, String.class);
-
         System.out.println(forObject);
-
         return "OK";
     }
 
@@ -64,19 +60,16 @@ public class MyController2 {
      */
     @RequestMapping("/client7")
     public Object client7() {
-
         List<ServiceInstance> instances = discoveryClient.getInstances("provider");
-
         //自定义轮询算法
-
         //随机
         int i = new Random().nextInt(instances.size());
 
+
         //轮询算法
-
        /* int andIncrement = atomicInteger.getAndIncrement();
-
         int i = andIncrement % instances.size();*/
+
 
         //权重算法
         /*for (ServiceInstance s:instances) {
@@ -85,14 +78,10 @@ public class MyController2 {
 
 
         ServiceInstance serviceInstance = instances.get(i);
-
         String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/getport";
-
         RestTemplate restTemplate = new RestTemplate();
         String forObject = restTemplate.getForObject(url, String.class);
-
         System.out.println(forObject);
-
         return serviceInstance.getPort();
     }
 

@@ -22,3 +22,7 @@ eureka:
 
 ribbon:
     NFLoadBalancerRuleClassName:  com.netflix.loadbalancer.RoundRobinRule
+    eureka:
+      enabled: true
+    listOfServers: localhost:90,localhost:91
+

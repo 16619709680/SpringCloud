@@ -22,15 +22,16 @@ public class EurekaClientApplication {
 
     /**
      * 负载均衡算法
-     * @return
      */
     @Bean
     public IRule myRule(){
-
         return new RoundRobinRule();
         //return new RandomRule();
     }
 
+    /**
+     * 加入拦截器
+     */
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){
