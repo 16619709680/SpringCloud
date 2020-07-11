@@ -9,3 +9,33 @@ eureka:
     service-url:
       defaultZone: http://localhost:8080/eureka/
 
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 1000
+  MaxAutoRetried: 2
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: false
+feign:
+  hystrix:
+    enabled: true
+
+
+
+hystrix:
+  cmomand:
+    default:
+      execution:
+        isolcation:
+          strategy: SEMAPHORE
+
+  command:
+    default:
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 10
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

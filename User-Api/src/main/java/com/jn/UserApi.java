@@ -3,7 +3,7 @@ package com.jn;
 
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/User")
+//@RequestMapping("/User")
 public interface UserApi {
 
     @GetMapping("alive")

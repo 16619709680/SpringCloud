@@ -1,10 +1,15 @@
 spring:
   application:
     name: user-provider
+  security:
+    user:
+      name: root
+      password: root
 server:
-  port: 9000
+  port: 9020
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/
+
