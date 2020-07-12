@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cloud-Admin" />
         <module name="User-Provider" />
         <module name="eureka-server" />
+        <module name="Eureka-Client" />
         <module name="eureka-client" />
-        <module name="Eureka-Provider" />
+        <module name="Cloud-Zuul" />
         <module name="SpringCloud" />
         <module name="User-Customer" />
-        <module name="Eureka-Server" />
+        <module name="Cloud-Admin" />
         <module name="eureka-provider" />
-        <module name="Eureka-Client" />
+        <module name="Eureka-Provider" />
         <module name="User-Api" />
-        <module name="Cloud-Zuul" />
+        <module name="Eureka-Server" />
+        <module name="Config-CenterServer" />
       </profile>
     </annotationProcessing>
   </component>
@@ -25,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Cloud-Admin" options="-parameters" />
       <module name="Cloud-Zuul" options="-parameters" />
+      <module name="Config-CenterServer" options="-parameters" />
       <module name="Eureka-Client" options="-parameters" />
       <module name="Eureka-Provider" options="-parameters" />
       <module name="Eureka-Server" options="-parameters" />
