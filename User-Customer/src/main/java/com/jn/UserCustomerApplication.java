@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients
-@EnableCircuitBreaker
-@EnableHystrixDashboard
+@EnableFeignClients//启用feign客户端
+@EnableCircuitBreaker//断路器功能
+@EnableHystrixDashboard//信息监控可视化
 public class UserCustomerApplication {
 
     public static void main(String[] args) {

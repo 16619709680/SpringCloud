@@ -19,16 +19,16 @@ public class ProviderController implements UserApi {
     @Override
     public String alive() {
 
-        try {
+        /*try {
             System.out.println("准备睡觉。。。。。。。。。。");
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         int i = atomicInteger.getAndIncrement();
-        System.out.println("端口：" + port + "第" + i + "次调用");
-        return "alive";
+        System.out.println("provider端口：" + port + "第" + i + "次调用");
+        return "provider端口：" + port;
     }
 
     @Override

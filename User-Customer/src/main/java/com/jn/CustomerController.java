@@ -2,6 +2,7 @@ package com.jn;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,10 +16,12 @@ public class CustomerController {
     @Autowired
     RestTemplate restTemplate;
 
+    @Value("${server.port}")
+    String port;
 
     @GetMapping("/alive")
     public String alive() {
-        return customerApi.alive();
+        return "Customer:port "+port +"------>"+ customerApi.alive();
     }
 
     /**

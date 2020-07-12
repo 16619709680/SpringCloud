@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/User-Api/pom.xml" />
         <option value="$PROJECT_DIR$/User-Provider/pom.xml" />
         <option value="$PROJECT_DIR$/User-Customer/pom.xml" />
+        <option value="$PROJECT_DIR$/Cloud-Zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/Cloud-Admin/pom.xml" />
       </list>
     </option>
   </component>

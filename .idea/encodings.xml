@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Cloud-Admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cloud-Zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Server/src/main/java" charset="UTF-8" />
@@ -9,6 +11,10 @@
     <file url="file://$PROJECT_DIR$/User-Customer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/User-Provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/文档/SpringCloud04.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/文档/SpringCloud05.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/文档/SpringCloud06.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/文档/SpringCloud07.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/文档/SpringCloud08.md" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

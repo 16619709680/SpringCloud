@@ -16,16 +16,16 @@ public class WebError implements FallbackFactory<CustomerApi> {
             @Override
             public String alive() {
                 String err = "";
-                System.out.println("|||||" + throwable);
+                System.out.println("----->" + throwable);
                 if (throwable instanceof HystrixTimeoutException) {
                     err = "远程服务器调用超时";
                     return err;
                 } else if (throwable instanceof FeignException.InternalServerError) {
                     err = "内部服务器信息异常" + throwable.getLocalizedMessage();
                     return err;
+                }else{
+                    err = "卧槽,这是什么错";
                 }
-                System.out.println(ToStringBuilder.reflectionToString(throwable));
-                err = "卧槽";
                 return err;
             }
 
