@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 public class CustomerController {
 
@@ -21,7 +23,7 @@ public class CustomerController {
 
     @GetMapping("/alive")
     public String alive() {
-        return "Customer:port "+port +"------>"+ customerApi.alive();
+        return "Customer:port " + port + "------>" + customerApi.alive();
     }
 
     /**
@@ -41,8 +43,8 @@ public class CustomerController {
         return person;
     }
 
-     /**
-     *  hystrix 整合 RestTemplate
+    /**
+     * hystrix 整合 RestTemplate
      */
     @HystrixCommand(defaultFallback = "callback")
     @GetMapping("/aliveRestTemplate")
@@ -52,8 +54,15 @@ public class CustomerController {
         return forObject;
     }
 
-    public String callback(){
-        return  "error....";
+    public String callback() {
+        return "error....";
+    }
+
+    @GetMapping("/token")
+    public String cookie(HttpServletRequest request) {
+        String token = request.getHeader("token");
+        System.out.println("token:    " + token);
+        return "token:"+token;
     }
 
 }

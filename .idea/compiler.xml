@@ -8,14 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="User-Provider" />
         <module name="eureka-server" />
-        <module name="Eureka-Client" />
         <module name="eureka-client" />
+        <module name="Eureka-Provider" />
         <module name="Cloud-Zuul" />
         <module name="SpringCloud" />
         <module name="User-Customer" />
         <module name="Cloud-Admin" />
         <module name="eureka-provider" />
-        <module name="Eureka-Provider" />
+        <module name="Eureka-Client" />
         <module name="User-Api" />
         <module name="Eureka-Server" />
         <module name="Config-CenterServer" />
