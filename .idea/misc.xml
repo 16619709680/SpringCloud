@@ -17,6 +17,9 @@
         <option value="$PROJECT_DIR$/Cloud-Zuul/pom.xml" />
         <option value="$PROJECT_DIR$/Cloud-Admin/pom.xml" />
         <option value="$PROJECT_DIR$/Config-CenterServer/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigCenter-Client/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigCente-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigServer/pom.xml" />
       </list>
     </option>
   </component>

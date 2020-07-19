@@ -6,27 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="User-Provider" />
-        <module name="eureka-server" />
-        <module name="eureka-client" />
-        <module name="Eureka-Provider" />
-        <module name="Cloud-Zuul" />
-        <module name="SpringCloud" />
-        <module name="User-Customer" />
+        <module name="ConfigServer" />
         <module name="Cloud-Admin" />
-        <module name="eureka-provider" />
-        <module name="Eureka-Client" />
+        <module name="Cloud-Zuul" />
+        <module name="User-Customer" />
+        <module name="eureka-client" />
+        <module name="ConfigCenter-Client" />
         <module name="User-Api" />
+        <module name="Eureka-Client" />
+        <module name="eureka-provider" />
+        <module name="eureka-server" />
+        <module name="SpringCloud" />
+        <module name="User-Provider" />
         <module name="Eureka-Server" />
-        <module name="Config-CenterServer" />
+        <module name="Eureka-Provider" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ConfigCenter-Server" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Cloud-Admin" options="-parameters" />
       <module name="Cloud-Zuul" options="-parameters" />
-      <module name="Config-CenterServer" options="-parameters" />
+      <module name="ConfigCenter-Client" options="-parameters" />
+      <module name="ConfigCenter-Server" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
       <module name="Eureka-Client" options="-parameters" />
       <module name="Eureka-Provider" options="-parameters" />
       <module name="Eureka-Server" options="-parameters" />

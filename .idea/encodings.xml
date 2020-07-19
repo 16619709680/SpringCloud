@@ -3,7 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Cloud-Admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Cloud-Zuul/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Config-CenterServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ConfigCenter-Client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ConfigServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Server/src/main/java" charset="UTF-8" />
